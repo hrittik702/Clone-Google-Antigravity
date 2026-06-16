@@ -1,0 +1,377 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Google Sans Flex";
+  font-weight: 400;
+  text-decoration: none;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  width: 100%;
+  padding: 0 72px;
+  height: 110vh;
+}
+
+nav {
+  padding: 8px 0;
+  width: 100%;
+  height: 52px;
+  display: flex;
+}
+
+nav .logo {
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  margin: 2px 20px 0 0;
+  height: 21px;
+  width: 200px;
+}
+
+.logo img {
+  margin-top: 4px;
+  height: 21px;
+}
+
+.nav-right {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+nav button,
+.products button {
+  color: #4f5157;
+  font-size: 15px;
+  font-weight: 500;
+  gap: 5px;
+  border: none;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+#nav-links button:hover {
+  background-color: #f1f2f7;
+  border-radius: 34px;
+  animation: arrow-up;
+}
+
+@keyframes arrow-up {
+  from {
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+#nav-links {
+  display: flex;
+}
+
+.button-with-arrow {
+  align-items: center;
+  padding: 6px 8px 6px 16px;
+}
+.button-with-arrow i {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.button-without-arrow {
+  padding: 6px 16px;
+}
+
+.nav-right .download-button,
+.products button,
+.upper {
+  background-color: #121317;
+  color: #fff;
+  height: 100%;
+  gap: 6px;
+  padding: 8px 16px 8px 16px;
+  border-radius: 50px;
+}
+
+.download-button i {
+  font-size: 14px;
+}
+
+.heading {
+  margin-bottom: 40px;
+  padding: 75px 0 0 0;
+  font-size: 27px;
+  font-weight: 1200;
+  line-height: 55px;
+  display: flex;
+  font-family: 'Google Sans Flex Medium';
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heading-left img {
+  width: 8px;
+  align-self: center;
+}
+
+.heading-right {
+  width: 30%;
+  /* display: flex; */
+  justify-content: flex-end;
+  /* align-items: flex-end; */
+}
+
+.heading button, .antigravity-sdk .lower {
+  font-size: 18px;
+  height: 46px;
+  background-color: #f8f8fb;
+  color: rgb(29, 29, 29);
+  border-radius: 35px;
+  margin-bottom: 8px;
+  padding: 8px 16px 8px 16px;
+  border: 1px solid #f1f2f7;
+}
+
+.heading button:hover,
+.products button:hover,
+.lower:hover {
+  background-color: #f0f1f5;
+}
+
+.products {
+  display: flex;
+  padding: 10px 0 20px 0;
+  gap: 20px;
+  border-bottom: 1px solid rgba(10, 10, 10, 0.2);
+}
+
+.products button,
+.lower {
+  border: 1px solid rgba(10, 10, 10, 0.2);
+  color: black;
+  background-color: #fff;
+}
+
+#anti-logo {
+  background-image: url(antigravity-icon__full-color.png);
+  background-size: cover;
+  height: 17px;
+  width: 17px;
+}
+
+.downloads {
+  /* margin-bottom: 100px; */
+  padding: 40px 0 40px 0;
+  width: 100%;
+  border-bottom: 1px solid rgba(10, 10, 10, 0.2);
+}
+
+.antigravity2-downloads {
+  padding: 40px 0 40px 0;
+}
+
+.downloads h1 {
+  margin-bottom: 20px;
+}
+
+.antigravity-grids {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  height: fit-content;
+  /* align-content: center; */
+}
+
+.grids h2 {
+  display: flex;
+  font-size: 22px;
+  font-weight: 500;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.antigravity-grids #download-options {
+  width: 100%;
+  margin-bottom: 90px;
+}
+
+.grids button {
+  width: 100%;
+  padding: 10px 24px;
+  font-size: 19px;
+}
+
+.lower {
+  border-radius: 35px;
+  margin-top: 10px;
+  font-size: 19px;
+  background-color: #2a2a2a01;
+}
+
+.grids {
+  width: 30%;
+}
+
+.grids p {
+  font-size: 15px;
+  color: #4f5157;
+}
+
+.horizontal-line {
+  border: none; /* Removes default 3D browser border */
+  height: 320px; /* Sets line thickness */
+  background-color: rgba(10, 10, 10, 0.2); /* Sets line color */
+  width: 1px; /* Adjusts width (e.g., 50% for half-width) */
+}
+
+.ide-section {
+  height: 150px;
+}
+
+.antigravity-ide .grids {
+  height: 150px;
+}
+
+.antigravity-cli {
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+.antigravity-cli p {
+  font-size: 30px;
+}
+
+.antigravity-cli .grids h2 {
+  font-size: 20px;
+}
+
+.antigravity-cli .macos {
+  margin-top: 30px;
+}
+
+.antigravity-cli .grids {
+  margin-bottom: 40px;
+  height: 140px;
+}
+
+.antigravity-ide .windows {
+  margin-bottom: 0;
+}
+
+#cli-commands {
+  border-radius: 15px;
+  padding: 25px 36px;
+  justify-content: space-between;
+  display: flex;
+  width: 45vw;
+  font-size: 14px;
+  color: #4e5c64;
+  background-color: #f8f9fc;
+}
+
+#cli-commands h4{
+  font-family: 'Roboto Mono';
+  font-weight: 450;
+}
+
+
+#cli-commands span:hover{
+  background-color: #f0f0f0;
+  
+}
+
+#cli-commands span{
+  /* background-color: #f0f0f0; */
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+#antigravity-sdk .grids{
+  width: 0vw;
+}
+
+.sdk{
+  margin-top: 20px;
+}
+
+.sdk .lower{
+  padding : 8px 26px 8px 26px;
+}
+
+
+footer #footer-container{
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* footer */
+footer .footer-up{
+  display: flex;
+  justify-content: space-between;
+  flex-basis: auto;
+  flex-grow: 1;
+}
+
+.footer-links-left, .footer-links-right{
+  width: 10vw;
+}
+
+footer a{
+  text-decoration: none;
+  color: #4f5157;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+footer a>p{
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+footer a:hover{
+  text-decoration: underline;
+}
+
+.footer-lower .antigravity-big p{
+  font-size: 20vw;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.antigravity-big sup span{
+  padding-top: 20px;
+}
+
+.footer-end{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.google-logo img{
+  height: 80px;
+  width: auto;
+}
+
+.antigravity-big #y{
+  font-size: 25vw;
+}
+
+.footer-end .links{
+  margin-right: 20vw;
+}
+
+.footer-end a{
+  font-size: 14px;
+  margin-right: 20px;
+}
