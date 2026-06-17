@@ -70,13 +70,6 @@ nav button,
   animation: arrow-up;
 }
 
-@keyframes arrow-up {
-  from {
-  }
-  to {
-    transform: rotate(90deg);
-  }
-}
 
 #nav-links {
   display: flex;
@@ -116,7 +109,7 @@ nav button,
 }
 
 .heading {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   padding: 75px 0 0 0;
   font-size: 27px;
   font-weight: 200;
@@ -387,14 +380,17 @@ footer a:hover {
   text-decoration: underline;
 }
 
-.footer-lower .antigravity-big p {
-  font-size: 20vw;
-  font-weight: 900;
-  margin-bottom: 20px;
+.antigravity-big{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-.antigravity-big sup span {
-  padding-top: 20px;
+.footer-lower .antigravity-big p {
+  font-size: 18vw;
+  font-weight: 900;
+  margin-bottom: 20px;
 }
 
 .footer-end {
@@ -408,7 +404,11 @@ footer a:hover {
 }
 
 .antigravity-big #y {
-  font-size: 25vw;
+  font-size: 22vw;
+  /* position: absolute; */
+  right: 120px;
+  bottom: 60px;
+  /* top: ; */
 }
 
 .footer-end .links {
@@ -440,6 +440,8 @@ footer a:hover {
   .heading{
     justify-content: flex-start;
     align-items: flex-start;
+    padding-top: 5vh;
+    flex-direction: column;
   }
 
   .products {
@@ -462,11 +464,7 @@ footer a:hover {
     margin-right: 5vw;
   }
 
-  .heading {
-    padding-top: 5vh;
-    flex-direction: column;
-  }
-
+  
   .heading-left {
     font-size: 0.5em;
     height: fit-content;
@@ -479,6 +477,12 @@ footer a:hover {
   .heading-left img{
     left: 330px;
     width: 8px;
+  }
+
+  .antigravity-big #y{
+    right: 35px;
+    bottom: 32px;
+
   }
 
   .products button {
@@ -563,6 +567,7 @@ footer a:hover {
     margin-top: 20px;
     margin-bottom: 10px;
     font-size: 15px;
+    white-space: nowrap;
   }
 
   .footer-end {
@@ -573,7 +578,7 @@ footer a:hover {
     justify-content: left;
     width: fit-content;
     align-self: flex-start;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
   }
 
   footer .footer-end,
