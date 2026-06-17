@@ -3,8 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Google Sans Flex";
-  font-weight: 400;
   text-decoration: none;
+  font-weight: 400;
 }
 
 html,
@@ -14,8 +14,6 @@ body {
   scroll-behavior: smooth;
   will-change: transform;
   transform: translateZ(0);
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
   /* overflow-x: hidden; */
 }
 
@@ -118,20 +116,42 @@ nav button,
 }
 
 .heading {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   padding: 75px 0 0 0;
   font-size: 27px;
-  font-weight: 1200;
+  font-weight: 200;
+  width: 100%;
   line-height: 55px;
   display: flex;
   font-family: "Google Sans Flex Medium";
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
+.heading-up, .heading-down{
+  width: 100%;
+  height: 8vh;
+  position:relative;
+}
+
 .heading-left img {
-  width: 8px;
+  width: 10px;
   align-self: center;
+  position: absolute;
+  left: 580px;
+  animation: blink 0.5s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .heading-right {
@@ -417,6 +437,11 @@ footer a:hover {
     display: none;
   }
 
+  .heading{
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
   .products {
     overflow-x: auto;
     scrollbar-width: none;
@@ -451,14 +476,17 @@ footer a:hover {
     line-height: 0.5vh;
   }
 
-  .heading-right {
-    justify-content: flex-start;
+  .heading-left img{
+    left: 330px;
+    width: 8px;
   }
 
   .products button {
     /* display: inline-block; */
-    width: 100%;
-    /* font-size: 0.5em; */
+    width: fit-content;
+    white-space: nowrap;
+    font-size: 1em;
+    font-weight: 600;
     align-items: center;
   }
 
@@ -472,6 +500,14 @@ footer a:hover {
     margin-top: 2vw;
   }
 
+  .heading{
+    margin-bottom: 40px;
+  }
+  .heading-up, .heading-down{
+    height: 5vh;
+    font-size: 1.1em;
+    font-weight: 900;
+  }
   .horizontal-line {
     margin-top: 30px;
     margin-bottom: 20px;
@@ -546,5 +582,9 @@ footer a:hover {
     flex-direction: column;
 
     justify-content: left;
+  }
+
+  .heading button {
+    white-space: nowrap;
   }
 }
