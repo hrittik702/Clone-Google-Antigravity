@@ -48,12 +48,19 @@
                 Resources <span><i class="ri-arrow-down-s-line"></i></span>
               </button></a>
             </div>
-            <div>
-              <a href=""><button class="button-with-arrow download-button">
+            <div id="nav-download">
+              <form action="#hero">
+                <button class="button-with-arrow download-button black-button" style="cursor: pointer;">
                 Download <span><i class="ri-download-2-line"></i></span>
-              </button></a>
+              </button>
+              </form>
+              
+            </div>
+            <div class="menu">
+              <i class="ri-menu-line"></i>
             </div>
           </div>
+          
         </nav>
         <div class="heading">
           <div class="heading-left">
@@ -64,27 +71,44 @@
           </div>
           <button>View previous releases</button>
         </div>
+
+        <!-- Products Navigation -->
         <div class="products">
-          <button><span id="anti-logo"></span>Antigravity 2.0</button>
-          <button>
-            <span><i class="ri-terminal-box-line"></i></span>Antigravity CLI
+          <form action="#s1">
+          <button style="cursor: pointer;"><span id="anti-logo"><img src="Assets/antigravity-icon__full-color.png" alt=""></span><h5>Antigravity 2.0</h5></button>
+          </form>
+          <form action="#cli">
+            <button style="cursor: pointer;">
+            <span><i class="ri-terminal-box-line"></i></span><h5>Antigravity CLI</h5>
           </button>
-          <button>
-            <span><i class="ri-code-line"></i></span>Antigravity IDE
+          </form>
+          <form action="#ide">
+             <button style="cursor: pointer;">
+            <span><i class="ri-code-line"></i></span><h5>Antigravity IDE
+          </h5></button>
+          </form>
+          <form action="#sdk">
+            <button style="cursor: pointer;">
+            <span><i class="ri-puzzle-2-line"></i></span><h5>Antigravity SDK</h5>
           </button>
-          <button>
-            <span><i class="ri-puzzle-2-line"></i></span>Antigravity SDK
-          </button>
+          </form>
+          
         </div>
       </section>
-      <div class="downloads antigravity2-downloads">
+
+      <!-- Antigravity 2.0 Downloads -->
+      <div class="downloads antigravity2-downloads" id="s1" >
         <h1>Antigravity 2.0</h1>
         <div class="antigravity-grids">
           <div class="grids">
             <h2><span><i class="ri-apple-fill"></i></span>macOS</h2>
             <div id="download-options">
-              <button class="upper">Download for Apple Silicon</button>
-              <button class="lower">Download for Intel</button>
+              <form action="https://storage.googleapis.com/antigravity-public/antigravity-hub/2.1.4-6481382726303744/darwin-arm/Antigravity.dmg">
+                <button style="cursor: pointer;" class="upper black-button">Download for Apple Silicon</button>
+              </form>
+              <form action="https://storage.googleapis.com/antigravity-public/antigravity-hub/2.1.4-6481382726303744/darwin-arm/Antigravity.dmg">
+                <button style="cursor: pointer;" class="lower">Download for Intel</button>
+              </form>
             </div>
             <div id="info">
               <h4>Minimum Requirements</h4>
@@ -97,8 +121,12 @@
           <div class="grids">
             <h2><span><i class="ri-windows-fill"></i></span>Windows</h2>
             <div id="download-options">
-              <button class="upper"">Download for X64</button>
-              <button class="lower">Download for ARM64</button>
+              <form action="https://storage.googleapis.com/antigravity-public/antigravity-hub/2.1.4-6481382726303744/windows-x64/Antigravity-x64.exe">
+                <button style="cursor: pointer;" class="upper black-button">Download for X64</button>
+              </form>
+              <form action="https://storage.googleapis.com/antigravity-public/antigravity-hub/2.1.4-6481382726303744/windows-arm/Antigravity-arm64.exe">
+                <button style="cursor: pointer;" class="lower">Download for ARM64</button>
+              </form>
             </div>
             <div id="info">
               <h4>Minimum Requirements</h4>
@@ -111,8 +139,12 @@
           <div class="grids">
             <h2><span><i class="ri-ubuntu-fill"></i></span>Linux</h2>
             <div id="download-options">
-              <button class="upper">Download for X64</button>
-              <button class="lower">Download for ARM64</button>
+              <form action="https://storage.googleapis.com/antigravity-public/antigravity-hub/2.1.4-6481382726303744/linux-x64/Antigravity.tar.gz">
+                 <button style="cursor: pointer;" class="upper black-button">Download for X64</button>
+              </form>
+             <form action="https://storage.googleapis.com/antigravity-public/antigravity-hub/2.1.4-6481382726303744/linux-arm/Antigravity.tar.gz">
+              <button style="cursor: pointer;" class="lower">Download for ARM64</button>
+             </form>
             </div>
             <div id="info">
               <h4>Minimum Requirements</h4>
@@ -124,71 +156,89 @@
         </div>
       </div>
       <!-- Antigravity CLI Section -->
-       <div class="downloads antigravity-ide">
+       <div class="downloads antigravity-cli" id="cli">
         <h1>Antigravity CLI</h1>
-        <p>Work with Antigravity directly in your codebase. Build,<br> debug, and ship from your terminal. Describe what you <br> need, and Antigravity handles the rest.</p>
+        <p>Work with Antigravity directly in your codebase. <br> Build, debug, and ship from your terminal. Describe <br>what you need, and Antigravity handles the rest.</p>
         <div class="antigravity-grids antigravity-cli">
           <div class="grids macos">
             <h2><span><i class="ri-apple-fill"></i></span>macOS &nbsp;  | <span><i class="ri-ubuntu-fill"></i></span>Linux</h2>
             <div id="cli-commands">
-              <h4>curl -fsSL https://antigravity.google/cli/install.sh | bash</h4>
+              <div class="container">
+                <h4>curl -fsSL https://antigravity.google/cli/install.sh | bash</h4>
               <span><i class="ri-file-copy-line"></i></span>
+              </div>
             </div>
           </div>
           <!-- <hr class="horizontal-line ide-section"> -->
           <div class="grids">
             <h2><span><i class="ri-windows-fill"></i></span>Windows PowerShell</h2>
             <div id="cli-commands">
-              <h4>irm https://antigravity.google/cli/install.ps1 | iex</h4>
+              <div class="container">
+                <h4>irm https://antigravity.google/cli/install.ps1 | iex</h4>
               <span><i class="ri-file-copy-line"></i></span>
+              </div>
             </div>
           </div>
           <!-- <hr class="horizontal-line ide-section"> -->
-          <div class="grids windows">
+          <div class="grids windows cmd">
             <h2><span><i class="ri-windows-fill"></i></span>Windows CMD</h2>
             <div id="cli-commands">
-              <h4>curl -fsSL https://antigravity.google/cli/install.cmd -o install.cmd && install.cmd && del install.cmd</h4>
+             <div class="container">
+               <h4>curl -fsSL https://antigravity.google/cli/install.cmd -o install.cmd && install.cmd && del install.cmd</h4>
               <span><i class="ri-file-copy-line"></i></span>
+             </div>
             </div>
           </div>
         </div>
       </div>
       <!-- Antigravity IDE Downloads Section -->
-      <div class="downloads antigravity-ide">
+      <div class="downloads antigravity-ide" id="ide">
         <h1>Antigravity IDE</h1>
         <div class="antigravity-grids">
           <div class="grids">
             <h2><span><i class="ri-apple-fill"></i></span>macOS</h2>
             <div id="download-options">
-              <button class="upper">Download for Apple Silicon</button>
-              <button class="lower">Download for Intel</button>
+              <form action="https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.4-6381998290370560/darwin-arm/Antigravity%20IDE.dmg">
+                <button style="cursor: pointer;" class="upper black-button">Download for Apple Silicon</button>
+              </form>
+              <form action="https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.4-6381998290370560/darwin-x64/Antigravity%20IDE.dmg">
+                <button style="cursor: pointer;" class="lower">Download for Intel</button>
+              </form>              
             </div>
           </div>
           <hr class="horizontal-line ide-section">
           <div class="grids">
             <h2><span><i class="ri-windows-fill"></i></span>Windows</h2>
             <div id="download-options">
-              <button class="upper">Download for X64</button>
-              <button class="lower">Download for ARM64</button>
+              <form action="https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.4-6381998290370560/windows-x64/Antigravity%20IDE.exe" >
+                <button style="cursor: pointer;" class="upper black-button" style="cursor: pointer;">Download for X64</button>
+              </form>
+              <form action="https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.4-6381998290370560/windows-x64/Antigravity%20IDE.exe">
+                <button style="cursor: pointer;" class="lower" style="cursor: pointer;">Download for ARM64</button>
+              </form>
             </div>
           </div>
           <hr class="horizontal-line ide-section">
           <div class="grids">
             <h2><span><i class="ri-ubuntu-fill"></i></span>Linux</h2>
             <div id="download-options">
-              <button class="upper">Download for X64</button>
-              <button class="lower">Download for ARM64</button>
+              <form action="https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.4-6381998290370560/linux-x64/Antigravity%20IDE.tar.gz">
+                 <button style="cursor: pointer;" class="upper black-button">Download for X64</button>
+              </form>
+              <form action="https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.0.4-6381998290370560/linux-arm/Antigravity%20IDE.tar.gz">
+                <button  style="cursor: pointer;" class="lower">Download for ARM64</button>
+              </form>
             </div>
           </div>
         </div>
       </div>
       <!-- Antigravity SDK -->
-       <div class="downloads antigravity-ide">
+       <div class="downloads antigravity-sdk" id="sdk">
         <h1>Antigravity SDK</h1>
-        <p>Work with Antigravity directly in your codebase. Build, <br>debug, and ship from your terminal. Describe what you <br>need, and Antigravity handles the rest.</p>
+        <p id="small">Work with Antigravity directly in your codebase. <br> Build,debug, and ship from your terminal. Describe <br> what you need, and Antigravity handles the rest.</p>
         <div class="antigravity-grids antigravity-cli antigravity-sdk">
           <div class="sdk">
-            <button class="lower"><span>Download</span></button>
+            <a class="lower" href="https://github.com/google-antigravity/antigravity-sdk-python"><span>Download</span></a>
           </div>
         </div>
       </div>
@@ -200,17 +250,17 @@
             <h1>Experience Liftoff</h1>
           </div>
           <div class="footer-links-left">
-            <a href=""><p>Download</p></a>
-            <a href=""><p>Product</p></a>
-            <a href=""><p>Docs</p></a>
-            <a href=""><p>Changelog</p></a>
-            <a href=""><p>Press</p></a>
-            <a href=""><p>Releases</p></a>
+            <a href="#hero"><p>Download</p></a>
+            <a href="https://antigravity.google/product"><p>Product</p></a>
+            <a href="https://antigravity.google/docs/getting-started"><p>Docs</p></a>
+            <a href="https://antigravity.google/changelog"><p>Changelog</p></a>
+            <a href="https://antigravity.google/press"><p>Press</p></a>
+            <a href="https://antigravity.google/releases"><p>Releases</p></a>
           </div>
           <div class="footer-links-right">
-            <a href=""><p>Blog</p></a>
-            <a href=""><p>Pricing</p></a>
-            <a href=""><p>Use Cases</p></a>
+            <a href="https://antigravity.google/blog"><p>Blog</p></a>
+            <a href="https://antigravity.google/pricing"><p>Pricing</p></a>
+            <a href="https://antigravity.google/use-cases"><p>Use Cases</p></a>
           </div>
         </div>
         <div class="footer-lower">
@@ -218,12 +268,12 @@
             <p><span>Antigravi<sup>t</sup><span id="y">y</span></span></p>
           </div>
           <div class="footer-end">
-            <div class="google-logo"><img src="Assets/google-dark.png" alt=""></div>
+            <div class="google-logo"><a href="https://google.com" target="_blank"><img src="Assets/google-dark.png" alt=""></a></div>
             <div class="links">
-              <a href="">About Google</a>
-              <a href="">Google Products</a>
-              <a href="">Privacy</a>
-              <a href="">Terms</a>
+              <a href="https://about.google/" target="_blank">About Google</a>
+              <a href="https://about.google/products/" target="_blank">Products</a>
+              <a href="https://policies.google.com/privacy?hl=en-US" target="_blank">Privacy</a>
+              <a href="https://antigravity.google/terms">Terms</a>
             </div>
           </div>
         </div>
