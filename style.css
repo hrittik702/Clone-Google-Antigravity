@@ -9,14 +9,21 @@
 
 html,
 body {
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
+  scroll-behavior: smooth;
+  will-change: transform; 
+  transform: translateZ(0);
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory; 
+  /* overflow-x: hidden; */
 }
 
 #main {
   width: 100%;
   padding: 0 72px;
-  height: 110vh;
+  scroll-snap-align: start;
+  /* height: 110vh; */
 }
 
 nav {
@@ -24,6 +31,8 @@ nav {
   width: 100%;
   height: 52px;
   display: flex;
+  /* justify-content: space-between;
+  align-items: center; */
 }
 
 nav .logo {
@@ -79,6 +88,7 @@ nav button,
   align-items: center;
   padding: 6px 8px 6px 16px;
 }
+
 .button-with-arrow i {
   font-size: 20px;
   margin-top: 10px;
@@ -86,6 +96,11 @@ nav button,
 
 .button-without-arrow {
   padding: 6px 16px;
+}
+
+.black-button:hover{
+  background-color: #2f3034;
+
 }
 
 .nav-right .download-button,
@@ -134,8 +149,14 @@ nav button,
   color: rgb(29, 29, 29);
   border-radius: 35px;
   margin-bottom: 8px;
+  cursor: pointer;
   padding: 8px 16px 8px 16px;
   border: 1px solid #f1f2f7;
+}
+
+.products img{
+  height: 15px;
+  /* margin-bottom: 10px; */
 }
 
 .heading button:hover,
@@ -147,9 +168,12 @@ nav button,
 .products {
   display: flex;
   padding: 10px 0 20px 0;
+  width: 100%;
   gap: 20px;
-  border-bottom: 1px solid rgba(10, 10, 10, 0.2);
+  border-bottom: 1px solid rgba(5, 5, 5, 0.1);
 }
+
+
 
 .products button,
 .lower {
@@ -169,7 +193,7 @@ nav button,
   /* margin-bottom: 100px; */
   padding: 40px 0 40px 0;
   width: 100%;
-  border-bottom: 1px solid rgba(10, 10, 10, 0.2);
+  border-bottom: 1px solid rgba(5, 5,5, 0.1);
 }
 
 .antigravity2-downloads {
@@ -207,6 +231,10 @@ nav button,
   font-size: 19px;
 }
 
+.menu{
+  display: none;
+}
+
 .lower {
   border-radius: 35px;
   margin-top: 10px;
@@ -226,7 +254,7 @@ nav button,
 .horizontal-line {
   border: none; /* Removes default 3D browser border */
   height: 320px; /* Sets line thickness */
-  background-color: rgba(10, 10, 10, 0.2); /* Sets line color */
+  background-color: rgba(5, 5, 5, 0.1); /* Sets line color */
   width: 1px; /* Adjusts width (e.g., 50% for half-width) */
 }
 
@@ -243,8 +271,8 @@ nav button,
   margin-bottom: 0;
 }
 
-.antigravity-cli p {
-  font-size: 30px;
+.antigravity-cli p, .antigravity-sdk p{
+  font-size: 15px;
 }
 
 .antigravity-cli .grids h2 {
@@ -359,8 +387,7 @@ footer a:hover{
 }
 
 .google-logo img{
-  height: 80px;
-  width: auto;
+  height: 30px;
 }
 
 .antigravity-big #y{
@@ -374,4 +401,153 @@ footer a:hover{
 .footer-end a{
   font-size: 14px;
   margin-right: 20px;
+}
+
+@media (max-width: 500px) {
+  html,body{
+    width: 100%;
+    overflow-x: hidden;
+    /* padding: 0 0; */
+  }
+
+  #main{
+    padding: 0 3vw;
+  }
+
+
+  #hero #nav-links, #nav-download{
+    display: none;
+  }
+
+  .products{
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+
+
+  nav .nav-right{
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-right .menu{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5vw;
+  }
+
+  .heading{
+    padding-top: 5vh;
+    flex-direction: column;
+  }
+
+  .heading-left{
+    font-size: 0.5em;
+    height: fit-content;
+  }
+
+  .heading-left h1{
+    line-height: 0.5vh;
+  }
+
+  .heading-right{
+    justify-content: flex-start;
+  }
+
+  .products button{
+    /* display: inline-block; */
+    width: 100%;
+    /* font-size: 0.5em; */
+    align-items: center;
+  }
+
+  .antigravity-grids{
+    flex-direction: column;
+  }
+
+  .grids{
+    width: 100%;
+    margin-bottom: 1vh;
+    margin-top: 2vw;
+  }
+
+  .horizontal-line{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    height: 1px;
+    width: 100%;
+    color: rgba(5, 5, 5, 0.1);
+
+    /* padding: 20px; */
+    /* background-color: white;
+    color: black; */
+  }
+
+   .antigravity-grids #download-options{
+    margin-bottom: 40px;
+  }
+
+  .grids #cli-commands{
+    width: 93vw;
+    padding: 16px 25px;
+    height: 12vh;
+    position: relative;
+  }
+
+  .container{
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  /* .container:hover{
+    overflow-x: auto;
+  } */
+
+  #cli-commands .container span i{
+    position: absolute;
+    left: 85vw;
+    top: 4vw;
+  }
+  .cmd #cli-commands {
+    height: 14vh;
+  }
+  
+  .antigravity-sdk p, .antigravity-cli>p{
+    font-size: 0.9em;
+  }
+
+  .footer-up{
+    flex-direction: column;
+  }
+
+  .footer-links-left, .footer-links-right{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+
+  .footer-end{
+    width: fit-content;
+  }
+
+  .footer-end .google-logo{
+    justify-content: left;
+    width: fit-content;
+    align-self: flex-start;
+    margin-bottom: 20px;
+  }
+
+  footer .footer-end, .links{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: left;
+  }
+
+
 }
