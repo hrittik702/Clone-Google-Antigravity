@@ -1,136 +1,85 @@
+:root{
+  --color-text-muted : #4f5157;
+  --color-dark-button : #121317;
+  --color-dark-button-hover : #2f3034;
+  --color-button-border : #C2C3C6;
+  --color-button-hover : #F8F8FB;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Google Sans Flex";
+  font-family: 'Google Sans Flex';
   text-decoration: none;
   font-weight: 400;
 }
 
 html,
 body {
-  /* height: 100%; */
   width: 100%;
+  height: 100%;
+  overflow-x: hidden;
   scroll-behavior: smooth;
-  will-change: transform;
-  transform: translateZ(0);
-  /* overflow-x: hidden; */
 }
 
 #main {
   width: 100%;
   padding: 0 72px;
-  scroll-snap-align: start;
-  /* height: 110vh; */
 }
 
 nav {
-  padding: 8px 0;
   width: 100%;
-  height: 52px;
+  height: 4vmax;
+  padding: 0.5vw 0;
   display: flex;
-  /* justify-content: space-between;
-  align-items: center; */
+  align-items: center;
 }
 
-nav .logo {
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: center; */
+nav>img{
   margin: 2px 20px 0 0;
   height: 21px;
+  align-self: center;
   width: 200px;
-}
-
-.logo img {
-  margin-top: 4px;
-  height: 21px;
 }
 
 .nav-right {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-nav button,
-.products button {
-  color: #4f5157;
-  font-size: 15px;
+
+nav a{
+  text-decoration: none;
+  color: var(--color-text-muted);
   font-weight: 500;
-  gap: 5px;
-  border: none;
-  background-color: #fff;
   display: flex;
   align-items: center;
 }
 
-#nav-links button:hover {
-  background-color: #f1f2f7;
-  border-radius: 34px;
-  animation: arrow-up;
-}
-
-
-#nav-links {
-  display: flex;
-}
-
-.button-with-arrow {
-  align-items: center;
-  padding: 6px 8px 6px 16px;
-}
-
-.button-with-arrow i {
-  font-size: 20px;
-  margin-top: 10px;
-}
-
-.button-without-arrow {
-  padding: 6px 16px;
-}
-
-.black-button:hover {
-  background-color: #2f3034;
-}
-
-.nav-right .download-button,
-.products button,
-.upper {
-  background-color: #121317;
-  color: #fff;
-  height: 100%;
-  gap: 6px;
-  padding: 8px 16px 8px 16px;
-  border-radius: 50px;
-}
-
-.download-button i {
-  font-size: 14px;
+.nav-right>i{
+  display: none;
 }
 
 .heading {
-  margin-bottom: 30px;
-  padding: 75px 0 0 0;
-  font-size: 27px;
-  font-weight: 200;
+  padding: 5vmax 0 3vw 0;
   width: 100%;
-  line-height: 55px;
   display: flex;
-  font-family: "Google Sans Flex Medium";
-  align-items: flex-start;
+  position: relative;
   justify-content: space-between;
 }
 
-.heading-up, .heading-down{
-  width: 100%;
-  height: 8vh;
-  position:relative;
+.heading .heading-left h1{
+  font-size: 6.2vh;
+  font-weight: 400;
+  line-height: 5vh;
 }
 
 .heading-left img {
   width: 10px;
   align-self: center;
-  position: absolute;
+  position: sticky;
   left: 580px;
   animation: blink 0.5s infinite;
 }
@@ -147,14 +96,84 @@ nav button,
   }
 }
 
-.heading-right {
-  width: 30%;
-  /* display: flex; */
-  justify-content: flex-end;
-  /* align-items: flex-end; */
+.heading>a{
+  color: black;
+  height: fit-content;
+  font-size: 1.1vw;
+  font-weight: 500;
+  padding: 1vw 2vw;
+  border: 1px solid var(--color-button-border);
+  border-radius: 100vw;
+  background-color: var(--color-button-hover);
 }
 
-.heading button,
+
+
+#nav-links a:hover {
+  background-color: #f1f2f7;
+  border-radius: 34px;
+}
+
+
+#nav-links {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.bta {
+  text-decoration: none;
+  color: var(--color-text-muted);
+  padding: 6px 8px 6px 16px;
+}
+
+.bwa {
+  padding: 6px 16px;
+}
+
+.black-button:hover {
+  background-color: #2f3034;
+}
+
+.dark-button{
+  background-color: var(--color-dark-button);
+  color: #fff;
+  box-sizing: content-box;
+  padding: 0.5vw 1vw;
+  border-radius: 10vw;
+}
+
+.dark-button:hover{
+  background-color: var(--color-dark-button-hover);
+}
+
+.products a{  
+  color: #000;
+  height: 100%;
+  display: flex;
+  font-size: 1.6vh;
+  font-weight: 500;
+  align-items: center;
+  gap: 6px;
+  padding: 0.5rem 1rem;
+  border-radius: 100vw;
+  border: 1px solid var(--color-button-border);
+}
+
+.nav-right .download-button,
+.upper {
+  background-color: #121317;
+  color: #fff;
+  height: 100%;
+  gap: 6px;
+  padding: 8px 16px 8px 16px;
+  border-radius: 50px;
+}
+
+.download-button i {
+  font-size: 14px;
+}
+
 .antigravity-sdk .lower {
   font-size: 18px;
   height: 46px;
