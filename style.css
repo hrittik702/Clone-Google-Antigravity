@@ -1,3 +1,4 @@
+/* Boiler Plate */
 :root{
   --color-text-muted : #4f5157;
   --color-dark-button : #121317;
@@ -19,13 +20,15 @@ html,
 body {
   width: 100%;
   height: 100%;
-  scroll-behavior: initial; */
+  scroll-behavior: initial; 
 }
 
 #main {
   width: 100%;
   padding: 0 72px;
 }
+
+
 
 nav {
   width: 100%;
@@ -106,13 +109,10 @@ nav a{
   background-color: var(--color-button-hover);
 }
 
-
-
 #nav-links a:hover {
   background-color: #f1f2f7;
   border-radius: 34px;
 }
-
 
 #nav-links {
   display: flex;
@@ -150,49 +150,50 @@ nav a{
   color: #000;
   height: 100%;
   display: flex;
-  font-size: 1.6vh;
+  font-size: 1.8vh;
   font-weight: 500;
   align-items: center;
   gap: 6px;
   padding: 0.5rem 1rem;
   border-radius: 100vw;
-  border: 1px solid var(--color-button-border);
+  border: 1px solid #11111121;
 }
 
-.nav-right .download-button,
-.upper {
+.download-options {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.upper-btn {
   background-color: #121317;
   color: #fff;
-  height: 100%;
-  gap: 6px;
-  width: 100%;
-  padding: 8px 16px 8px 16px;
-  border-radius: 50px;
+  display: flex;
+  padding: 0.9vw 0;
+  justify-content: center;
+  font-size: 1.2em;
+  border-radius: 100vw;
 }
 
-.download-button i {
-  font-size: 14px;
-}
-
-.antigravity-sdk .lower {
-  font-size: 18px;
-  height: 46px;
-  background-color: #f8f8fb;
-  color: rgb(29, 29, 29);
-  border-radius: 35px;
-  margin-bottom: 8px;
-  cursor: pointer;
-  padding: 8px 16px 8px 16px;
-  border: 1px solid #f1f2f7;
+.lower-btn{
+    color: black;
+  height: fit-content;
+  font-size: 1.2em;
+  padding: 0.9vw 0;
+  border: 1px solid #11111111;
+  border-radius: 100vw;
+  background-color: var(--color-button-hover);
 }
 
 .products img {
   height: 15px;
-  /* margin-bottom: 10px; */
 }
 
-.heading button:hover,
-.products button:hover,
+.heading a:hover,
+.products ahover,
 .lower:hover {
   background-color: #f0f1f5;
 }
@@ -238,38 +239,22 @@ nav a{
   display: flex;
   width: 100%;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 2vw;
   height: fit-content;
   /* align-content: center; */
 }
 
 .grids h2 {
   display: flex;
-  font-size: 22px;
+  align-items: center;
+  font-size: 1.2em;
   font-weight: 500;
-  gap: 10px;
+  gap: 1vw;
   margin-bottom: 10px;
-}
-.antigravity-grids #download-options {
-  width: 100%;
-  margin-bottom: 90px;
-}
-
-.grids button {
-  width: 100%;
-  padding: 10px 24px;
-  font-size: 19px;
 }
 
 .menu {
   display: none;
-}
-
-.lower {
-  border-radius: 35px;
-  margin-top: 10px;
-  font-size: 19px;
-  background-color: #2a2a2a01;
 }
 
 .grids {
@@ -277,7 +262,7 @@ nav a{
 }
 
 .grids p {
-  font-size: 15px;
+  font-size: 0.8rem;
   color: #4f5157;
 }
 
@@ -304,10 +289,6 @@ nav a{
 .antigravity-cli p,
 .antigravity-sdk p {
   font-size: 15px;
-}
-
-.antigravity-cli .grids h2 {
-  font-size: 20px;
 }
 
 .antigravity-cli .macos {
